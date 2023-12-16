@@ -15,18 +15,19 @@ const postToProcessImage = async (req, res) => {
   try {
     const { width, height } = req.body;
     const imageBuffer = req.file.buffer;
+
     const outputBuffer = await sharp(imageBuffer)
-      .resize(int(width), int(height))
+      .resize(parseInt(width), parseInt(height))
       .toBuffer();
 
-    // res.set({
-    //     "Content-Type": "image/png",
-    //     "Content-Disposition": `attachment; filename=modified_image.png`,
-    //   });
+    res.contentType("image/png");
 
-    res.status(200).send("SUCCESSFUL", outputBuffer);
+    res.send(outputBuffer);
   } catch (error) {
-    res.status(500).json({Status:"Failed", Description:"Image cannot be resized"});
+    console.log(error);
+    res
+      .status(500)
+      .json({ Status: "Failed", Description: "Image cannot be resized" });
   }
 };
 
