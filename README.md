@@ -6,7 +6,7 @@
 
 ## Step 1: Install dependencies
 
-For Installation run -> npm install
+For dependencies Installation run -> npm install
 
 ## Step 2: Start the backend server
 
