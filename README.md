@@ -1,4 +1,4 @@
-##Resize
+## Resize
 ![image](https://github.com/Israr-11/Image-processing-api/assets/91403838/f508d351-3866-4049-9c8e-7a46bf4ce462)
 
 API that is built using Node js used to fetch Football related news from all the top news websites of the world
